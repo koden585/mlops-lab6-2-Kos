@@ -1,0 +1,18 @@
+# Игнорируем большие обработанные данные и модели
+data/processed/*
+models/*
+
+# Но НЕ игнорируем .dvc-файлы и .gitkeep
+!data/processed/*.dvc
+!models/*.dvc
+!data/processed/.gitkeep
+!models/.gitkeep
+
+# Игнорируем кэш DVC и MLflow
+.dvc/cache/
+mlruns/
+
+# Игнорируем IDE-файлы
+.idea/
+__pycache__/
+*.pyc
